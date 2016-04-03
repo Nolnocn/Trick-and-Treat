@@ -9,6 +9,8 @@ public class ProjectileScript : MonoBehaviour
 	private int direction;
 	private float yLevel;
 	private SpriteRenderer spriteRenderer;
+
+	private Rigidbody2D myRigidbody;
 	
 	void Start ()
 	{
@@ -18,6 +20,8 @@ public class ProjectileScript : MonoBehaviour
 		GetComponent<Rigidbody2D>().velocity = new Vector2(10 * direction, 0);
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		SetSortingOrder();
+
+		myRigidbody = GetComponent<Rigidbody2D>();
 	}
 
 	void Update ()
@@ -34,8 +38,8 @@ public class ProjectileScript : MonoBehaviour
 		{
 			if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
 			{
-				GetComponent<Rigidbody2D>().velocity = new Vector2(-GetComponent<Rigidbody2D>().velocity.x * 0.25f, direction * GetComponent<Rigidbody2D>().velocity.x * 0.5f);
-				GetComponent<Rigidbody2D>().gravityScale = 1.0f;
+				myRigidbody.velocity = new Vector2(-myRigidbody.velocity.x * 0.25f, direction * myRigidbody.velocity.x * 0.5f);
+				myRigidbody.gravityScale = 1.0f;
 				canCollide = false;
 				if(col.tag == "Ghost")
 				{
@@ -77,14 +81,14 @@ public class ProjectileScript : MonoBehaviour
 
 	private void ConstrainVertical()
 	{
-		if(transform.position.y < yLevel && GetComponent<Rigidbody2D>().velocity.y < 0)
+		if(transform.position.y < yLevel && myRigidbody.velocity.y < 0)
 		{
 			if(!startDespawn)
 			{
 				StartCoroutine(DespawnDelay());
 			}
 			//transform.position = new Vector3(transform.position.x, yLevel, transform.position.z);
-			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, -0.5f * GetComponent<Rigidbody2D>().velocity.y);
+			myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, -0.5f * myRigidbody.velocity.y);
 		}
 	}
 

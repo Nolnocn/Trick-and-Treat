@@ -23,6 +23,8 @@ public class GhostScript : EnemyScript
 	public GameObject parent;
 	public GameObject candy;
 
+	private Rigidbody2D myRigidbody;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -48,6 +50,8 @@ public class GhostScript : EnemyScript
 		stoopNum = Random.Range (0, 30);
 		targetLocation = ManagerScript.stoops [stoopNum].position;
 		ballSound = GetComponent<AudioSource> ();
+
+		myRigidbody = GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
@@ -88,31 +92,31 @@ public class GhostScript : EnemyScript
 					flee = false;
 					animator.SetBool ("flee", false);
 					animator.SetBool ("walk", false);
-					GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+					myRigidbody.velocity = Vector2.zero;
 				}
 			}
 						
 			if (flee) {
 				// run at fleeing speed away from player if not protected
 				if (parent == null) {
-					GetComponent<Rigidbody2D> ().velocity = -((Vector2)player.position - (Vector2)transform.position).normalized * fleeSpeed;
+					myRigidbody.velocity = -((Vector2)player.position - (Vector2)transform.position).normalized * fleeSpeed;
 								
 				} else {
-					GetComponent<Rigidbody2D> ().velocity = (targetLocation - (Vector2)transform.position).normalized * fleeSpeed;
+					myRigidbody.velocity = (targetLocation - (Vector2)transform.position).normalized * fleeSpeed;
 
 				}
 				animator.SetBool ("flee", true);
 				animator.SetBool ("walk", false);
 			}
-						// otherwise just walk around
-						else if (!protect) {
-				GetComponent<Rigidbody2D> ().velocity = (targetLocation - (Vector2)transform.position).normalized * walkSpeed;
+			// otherwise just walk around
+			else if (!protect) {
+				myRigidbody.velocity = (targetLocation - (Vector2)transform.position).normalized * walkSpeed;
 				animator.SetBool ("flee", false);
 				animator.SetBool ("walk", true);
 			}
 						
 
-			if (GetComponent<Rigidbody2D> ().velocity.x > 0) {
+			if (myRigidbody.velocity.x > 0) {
 				facingRight = true;
 				transform.localScale = new Vector3 (1, 1, 1);
 			} else {
@@ -120,9 +124,9 @@ public class GhostScript : EnemyScript
 				transform.localScale = new Vector3 (-1, 1, 1);
 			}
 		} 
-				// if being captured or stunned, don't move
-				else {
-			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+		// if being captured or stunned, don't move
+		else {
+			myRigidbody.velocity = Vector2.zero;
 		}
 	}
 

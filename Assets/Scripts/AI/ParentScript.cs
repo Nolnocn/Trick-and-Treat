@@ -17,6 +17,8 @@ public class ParentScript : EnemyScript
 	private Vector2 targetPosition;
 	private AudioSource zapSound;
 
+	private Rigidbody2D myRigidbody;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -39,17 +41,16 @@ public class ParentScript : EnemyScript
 		ballSound = audioSources [0];
 		zapSound = audioSources [1];
 
+		myRigidbody = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
-	{
-				
+	{		
 		Move ();
-				
 
 		if (!GetComponent<Renderer> ().isVisible) {
-			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			myRigidbody.velocity = Vector2.zero;
 			animator.SetBool ("moving", false);
 		}
 		Wrap ();
@@ -76,7 +77,7 @@ public class ParentScript : EnemyScript
 					animator.SetBool ("protecting", true);
 					protecting = true;
 					CalcTargetPosition ();
-					GetComponent<Rigidbody2D> ().velocity = (targetPosition - (Vector2)transform.position) * moveSpeed;
+					myRigidbody.velocity = (targetPosition - (Vector2)transform.position) * moveSpeed;
 
 					/*if (rigidbody2D.velocity.x > 0) {
 										facingRight = true;
@@ -86,16 +87,16 @@ public class ParentScript : EnemyScript
 										transform.localScale = new Vector3 (-1, 1, 1);
 								}*/
 				} else {
-					GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+					myRigidbody.velocity = Vector2.zero;
 					animator.SetBool ("moving", false);
 				}
 				Attack ();
 			}
 
-			if (GetComponent<Rigidbody2D> ().velocity.magnitude > 0.25f) {
+			if (myRigidbody.velocity.magnitude > 0.25f) {
 				animator.SetBool ("moving", true);
 			} else if ((!attacking && !stunned) || ghost == null) {
-				GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+				myRigidbody.velocity = Vector2.zero;
 				animator.SetBool ("moving", false);
 			}
 			if (!stunned && !attacking) {
@@ -137,7 +138,7 @@ public class ParentScript : EnemyScript
 	{
 		if (protecting && !stunned && Vector2.Distance (player.position, transform.position) < 1.25f && !player.GetComponent<PlayerScript> ().IsDead ()) {
 			attacking = true;
-			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+			myRigidbody.velocity = Vector2.zero;
 			animator.SetBool ("moving", false);
 			animator.SetTrigger ("attack");
 		}
@@ -170,7 +171,7 @@ public class ParentScript : EnemyScript
 		protecting = false;
 		ghost = null;
 		targetPosition = transform.position;
-		GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+		myRigidbody.velocity = Vector2.zero;
 	}
 
 	public bool IsProtecting ()

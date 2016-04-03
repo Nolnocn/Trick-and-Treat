@@ -9,6 +9,8 @@ public class NeighborWatchScript : EnemyScript {
 	private Transform tomPos;
 	private AudioSource shockSound;
 
+	private Rigidbody2D myRigidbody;
+
 	// Use this for initialization
 	void Start () {
 
@@ -43,6 +45,8 @@ public class NeighborWatchScript : EnemyScript {
 		AudioSource[] audioSources = GetComponents<AudioSource>();
 		ballSound = audioSources[0];
 		shockSound = audioSources[1];
+
+		myRigidbody = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -124,7 +128,7 @@ public class NeighborWatchScript : EnemyScript {
 		}*/
 
 		//transform.position += new Vector3(horSpeed, vertSpeed, 0);
-		GetComponent<Rigidbody2D>().velocity = new Vector2(horSpeed * horDir, vertSpeed * vertDir);
+		myRigidbody.velocity = new Vector2(horSpeed * horDir, vertSpeed * vertDir);
 	}
 
 	void Chase() {
@@ -142,7 +146,7 @@ public class NeighborWatchScript : EnemyScript {
 		}
 
 		//transform.position += new Vector3(horSpeed*moveDirection.x, vertSpeed*moveDirection.y, 0);
-		GetComponent<Rigidbody2D>().velocity = new Vector2(horSpeed * moveDirection.x * 2, vertSpeed * vertSpeed*moveDirection.y * 2);
+		myRigidbody.velocity = new Vector2(horSpeed * moveDirection.x * 2, vertSpeed * vertSpeed*moveDirection.y * 2);
 		CheckChaseRange ();
 		CheckCanAttack ();
 
@@ -195,7 +199,7 @@ public class NeighborWatchScript : EnemyScript {
 		if(Vector3.Distance(transform.position, tomPos.position) <= attackRange)
 		{
 			attacking = true;
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			myRigidbody.velocity = Vector2.zero;
 			StopChasing ();
 			StartAttack ();
 		}
@@ -265,7 +269,7 @@ public class NeighborWatchScript : EnemyScript {
 
 	void StartStun()
 	{
-		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		myRigidbody.velocity = Vector2.zero;
 		stunned = true;
 		animator.SetBool("stunned", true);
 		StopPatrolling ();

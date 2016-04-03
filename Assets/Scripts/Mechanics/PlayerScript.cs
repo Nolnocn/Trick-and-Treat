@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
 	private Transform[] candyToSuck;
 	private Transform childToSuck;
 	private UIManager joeShit;
+
+	private Rigidbody2D myRigidbody;
 	
 	void Start ()
 	{
@@ -39,6 +41,8 @@ public class PlayerScript : MonoBehaviour
 		lives = 3;
 		score = 0;
 		joeShit = Camera.main.GetComponent<UIManager>();
+
+		myRigidbody = GetComponent<Rigidbody2D>();
 	}
 
 	void Update ()
@@ -115,11 +119,11 @@ public class PlayerScript : MonoBehaviour
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 		
-		GetComponent<Rigidbody2D>().velocity = 
+		myRigidbody.velocity = 
 			new Vector2(horSpeed * Input.GetAxisRaw("Horizontal"), vertSpeed * Input.GetAxisRaw("Vertical"));
 		mngr.ParalaxifyTrees(-horSpeed * 0.5f * Input.GetAxisRaw("Horizontal"));
 
-		if(Input.GetAxisRaw("Horizontal") == 0 && GetComponent<Rigidbody2D>().velocity.y == 0)
+		if(Input.GetAxisRaw("Horizontal") == 0 && myRigidbody.velocity.y == 0)
 		{
 			StopMoving();
 		}
@@ -152,7 +156,7 @@ public class PlayerScript : MonoBehaviour
 		if(moving)
 		{
 			moving = false;
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			myRigidbody.velocity = Vector2.zero;
 			animator.SetBool("moving", false);
 		}
 	}
@@ -183,13 +187,13 @@ public class PlayerScript : MonoBehaviour
 		StopMoving();
 		ArrayList candyToSuckTemp = new ArrayList();
 
-		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x, transform.position.y), 2.5f, Vector2.up);
+		Collider2D[] hits = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y), 2.5f);
 
 		for(int i = 0; i < hits.Length; i++)
 		{
-			if(hits[i].collider.gameObject.tag == "Candy")
+			if(hits[i].gameObject.tag == "Candy")
 			{
-				Transform candy = hits[i].collider.transform;
+				Transform candy = hits[i].transform;
 				int dir = facingRight ? 1 : -1;
 				Vector3 relativePos = dir * (candy.position - transform.position);
 				float angleOfAim = Mathf.Rad2Deg * Mathf.Atan2(relativePos.y,relativePos.x);
@@ -203,9 +207,9 @@ public class PlayerScript : MonoBehaviour
 					}
 				}
 			}
-			else if(hits[i].collider.gameObject.tag == "Ghost")
+			else if(hits[i].gameObject.tag == "Ghost")
 			{
-				Transform ghost = hits[i].collider.transform;
+				Transform ghost = hits[i].transform;
 				if(ghost.position.y <= transform.position.y + .25f && ghost.position.y >= transform.position.y - .25f)
 				{
 					if(facingRight)
@@ -291,8 +295,8 @@ public class PlayerScript : MonoBehaviour
 			StopTaunt();
 			
 			yLevel = transform.position.y;
-			GetComponent<Rigidbody2D>().gravityScale = 1.0f;
-			GetComponent<Rigidbody2D>().velocity = 5 * new Vector2(attackerXPos <= transform.position.x ? 1 : -1, 1).normalized;
+			myRigidbody.gravityScale = 1.0f;
+			myRigidbody.velocity = 5 * new Vector2(attackerXPos <= transform.position.x ? 1 : -1, 1).normalized;
 			StartCoroutine(StopShock());
 		}
 	}
@@ -302,7 +306,7 @@ public class PlayerScript : MonoBehaviour
 		yield return new WaitForSeconds(1.0f);
 		shocked = false;
 		animator.SetBool("shocked", false);
-		GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+		myRigidbody.gravityScale = 0.0f;
 		joeShit.ShockedUI();
 		SubtractLife();
 	}
@@ -347,9 +351,9 @@ public class PlayerScript : MonoBehaviour
 
 	private void Bounce()
 	{
-		if(transform.position.y < yLevel && GetComponent<Rigidbody2D>().velocity.y < 0)
+		if(transform.position.y < yLevel && myRigidbody.velocity.y < 0)
 		{
-			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, -0.5f * GetComponent<Rigidbody2D>().velocity.y);
+			myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, -0.5f * myRigidbody.velocity.y);
 		}
 	}
 
@@ -359,7 +363,7 @@ public class PlayerScript : MonoBehaviour
 		joeShit.LoseLife();
 		if(lives <= 0)
 		{
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			myRigidbody.velocity = Vector2.zero;
 			dead = true;
 			animator.SetBool("DEAD", true);
 		}
