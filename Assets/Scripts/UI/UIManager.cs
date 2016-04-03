@@ -239,7 +239,7 @@ public class UIManager : MonoBehaviour
 	{
 		PlayerPrefs.SetInt("currScore", score);
 		//Application.LoadLevel("LoseScreen");
-		SceneManager.LoadScene("LoseScreen");
+		SceneManager.LoadSceneAsync("LoseScreen");
 	}
 }
 
