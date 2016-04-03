@@ -2120,8 +2120,8 @@ GameObject:
   - 4: {fileID: 1826913688}
   - 212: {fileID: 1826913689}
   - 95: {fileID: 1826913691}
-  - 50: {fileID: 1826913693}
   - 61: {fileID: 1826913692}
+  - 50: {fileID: 1826913693}
   - 114: {fileID: 1826913690}
   - 82: {fileID: 1826913694}
   - 82: {fileID: 1826913695}
@@ -2203,7 +2203,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 442ce8a5bc38f5e47aa8bd7f5ef0f9ed, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2238,7 +2238,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!82 &1826913694
 AudioSource:
   m_ObjectHideFlags: 0
