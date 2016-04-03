@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MainMenuUIManager : MonoBehaviour {
@@ -60,6 +61,8 @@ public class MainMenuUIManager : MonoBehaviour {
 	public Texture2D CandyCorn_Hover_JoeSucks;
 	public Texture2D CandyCorn_Active_JoeSucks;
 
+	private AsyncOperation sceneLoad;
+
 	void Start()
 	{
 		Cursor.visible = true;
@@ -119,13 +122,15 @@ public class MainMenuUIManager : MonoBehaviour {
 			GUI.DrawTexture (new Rect (Screen.width * xNWImageOffset, Screen.height * yNWImageOffset, NWImageScale, NWImageScale), NWSprite);
 			GUI.DrawTexture(new Rect(Screen.width * xBoxTransform - 200, Screen.height * yLogoTransform, 400, 245),menuLogo);
 
-			if(!Application.isLoadingLevel)
+			//if(!Application.isLoadingLevel)
+			if(sceneLoad == null)
 			{
 				//PLAY
 				if(GUI.Button (new Rect (Screen.width * xBoxTransform - 125, Screen.height * yButtonOffset, 250, 50), playButton)) {
 					if(Application.CanStreamedLevelBeLoaded("Game"))
 					{
-						Application.LoadLevel("Game");
+						//Application.LoadLevel("Game");
+						sceneLoad = SceneManager.LoadSceneAsync("Game");
 					}
 				}
 

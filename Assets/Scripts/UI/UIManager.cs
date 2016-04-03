@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class UIManager : MonoBehaviour 
@@ -104,7 +105,8 @@ public class UIManager : MonoBehaviour
 			//MAIN MENU
 			if (GUI.Button (new Rect (Screen.width * xBoxTransform - 125, Screen.height * yButtonOffset + 160, 250, 50), menuButton)) {
 				TogglePause();
-				Application.LoadLevel("MainMenu");
+				//Application.LoadLevel("MainMenu");
+				SceneManager.LoadScene("Game");
 			}
 			//At the highscore screen
 		} 
@@ -236,7 +238,8 @@ public class UIManager : MonoBehaviour
 	public void GameOver()
 	{
 		PlayerPrefs.SetInt("currScore", score);
-		Application.LoadLevel("LoseScreen");
+		//Application.LoadLevel("LoseScreen");
+		SceneManager.LoadScene("LoseScreen");
 	}
 }
 

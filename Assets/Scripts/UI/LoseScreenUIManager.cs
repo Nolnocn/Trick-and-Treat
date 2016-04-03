@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LoseScreenUIManager : MonoBehaviour {
@@ -174,10 +175,12 @@ public class LoseScreenUIManager : MonoBehaviour {
 				PlayerPrefs.DeleteKey("currScore");
 			}
 			PlayerPrefs.SetInt("goToScore", 1);
-			Application.LoadLevel("MainMenu");
+			//Application.LoadLevel("MainMenu");
+			SceneManager.LoadScene("MainMenu");
 		}
 		if(GUI.Button (new Rect (Screen.width * xTextOffset3, Screen.height * yTextOffset3 + 55, 250, 50), menuButton)) {
-			Application.LoadLevel("MainMenu");
+			//Application.LoadLevel("MainMenu");
+			SceneManager.LoadScene("MainMenu");
 		}
 
 	}
