@@ -106,7 +106,7 @@ public class UIManager : MonoBehaviour
 			if (GUI.Button (new Rect (Screen.width * xBoxTransform - 125, Screen.height * yButtonOffset + 160, 250, 50), menuButton)) {
 				TogglePause();
 				//Application.LoadLevel("MainMenu");
-				SceneManager.LoadScene("Game");
+				SceneManager.LoadScene("MainMenu");
 			}
 			//At the highscore screen
 		} 
