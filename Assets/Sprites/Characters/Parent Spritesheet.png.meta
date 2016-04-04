@@ -1,6 +1,39 @@
 fileFormatVersion: 2
 guid: 413bc603c4dd4f849a0f0a680f3fe413
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Parent Spritesheet_0
+    21300002: Parent Spritesheet_1
+    21300004: Parent Spritesheet_2
+    21300006: Parent Spritesheet_3
+    21300008: Parent Spritesheet_4
+    21300010: Parent Spritesheet_5
+    21300012: Parent Spritesheet_6
+    21300014: Parent Spritesheet_7
+    21300016: Parent Spritesheet_8
+    21300018: Parent Spritesheet_9
+    21300020: Parent Spritesheet_10
+    21300022: Parent Spritesheet_11
+    21300024: Parent Spritesheet_12
+    21300026: Parent Spritesheet_13
+    21300028: Parent Spritesheet_14
+    21300030: Parent Spritesheet_15
+    21300032: Parent Spritesheet_16
+    21300034: Parent Spritesheet_17
+    21300036: Parent Spritesheet_18
+    21300038: Parent Spritesheet_19
+    21300040: Parent Spritesheet_20
+    21300042: Parent Spritesheet_21
+    21300044: Parent Spritesheet_22
+    21300046: Parent Spritesheet_23
+    21300048: Parent Spritesheet_24
+    21300050: Parent Spritesheet_25
+    21300052: Parent Spritesheet_26
+    21300054: Parent Spritesheet_27
+    21300056: Parent Spritesheet_28
+    21300058: Parent Spritesheet_29
+    21300060: Parent Spritesheet_30
+    21300062: Parent Spritesheet_31
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -14,27 +47,32 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 4096
+  maxTextureSize: 1024
   textureSettings:
-    filterMode: 2
+    filterMode: 1
     aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 400
   alphaIsTransparency: 1
@@ -52,6 +90,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 59}
+        - {x: -31, y: 59}
+        - {x: -34, y: 51}
+        - {x: -54, y: -31}
+        - {x: -54, y: -38}
+        - {x: -51, y: -39}
+        - {x: -45, y: -63}
+        - {x: 54, y: -63}
+        - {x: 57, y: -58}
+        - {x: 57, y: 41}
+        - {x: 17, y: 56}
     - name: Parent Spritesheet_1
       rect:
         serializedVersion: 2
@@ -62,6 +112,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 57}
+        - {x: -54, y: 20}
+        - {x: -54, y: -63}
+        - {x: 49, y: -63}
+        - {x: 57, y: -33}
+        - {x: 57, y: 31}
+        - {x: 26, y: 57}
     - name: Parent Spritesheet_2
       rect:
         serializedVersion: 2
@@ -72,6 +130,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 56}
+        - {x: -55, y: -16}
+        - {x: -55, y: -63}
+        - {x: 36, y: -63}
+        - {x: 56, y: -60}
+        - {x: 56, y: 40}
+        - {x: 15, y: 56}
     - name: Parent Spritesheet_3
       rect:
         serializedVersion: 2
@@ -82,6 +148,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 57}
+        - {x: -30, y: 57}
+        - {x: -36, y: 54}
+        - {x: -54, y: -12}
+        - {x: -54, y: -56}
+        - {x: -49, y: -62}
+        - {x: 57, y: -62}
+        - {x: 57, y: 37}
+        - {x: 26, y: 53}
     - name: Parent Spritesheet_4
       rect:
         serializedVersion: 2
@@ -92,6 +168,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -4}
+        - {x: 57, y: 42}
+        - {x: 15, y: 60}
+        - {x: -51, y: 60}
+        - {x: -54, y: 4}
+        - {x: -54, y: -61}
+        - {x: 43, y: -61}
+        - {x: 52, y: -43}
+        - {x: 46, y: -34}
+        - {x: 41, y: -32}
     - name: Parent Spritesheet_5
       rect:
         serializedVersion: 2
@@ -102,6 +189,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 62}
+        - {x: -30, y: 62}
+        - {x: -38, y: 55}
+        - {x: -46, y: 40}
+        - {x: -46, y: -58}
+        - {x: 34, y: -58}
+        - {x: 49, y: -55}
+        - {x: 62, y: -11}
+        - {x: 62, y: 47}
+        - {x: 51, y: 58}
     - name: Parent Spritesheet_6
       rect:
         serializedVersion: 2
@@ -112,6 +210,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 59}
+        - {x: -49, y: 51}
+        - {x: -49, y: -55}
+        - {x: -45, y: -57}
+        - {x: 43, y: -57}
+        - {x: 61, y: -29}
+        - {x: 61, y: 59}
     - name: Parent Spritesheet_7
       rect:
         serializedVersion: 2
@@ -122,6 +228,21 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: 36}
+        - {x: 57, y: 41}
+        - {x: 39, y: 34}
+        - {x: 29, y: 24}
+        - {x: 24, y: 51}
+        - {x: 1, y: 56}
+        - {x: -40, y: 56}
+        - {x: -50, y: 18}
+        - {x: -50, y: -46}
+        - {x: -45, y: -55}
+        - {x: 52, y: -55}
+        - {x: 56, y: -45}
+        - {x: 55, y: -34}
+        - {x: 63, y: -4}
     - name: Parent Spritesheet_8
       rect:
         serializedVersion: 2
@@ -132,6 +253,21 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 62}
+        - {x: -42, y: -49}
+        - {x: -38, y: -55}
+        - {x: 36, y: -55}
+        - {x: 49, y: -52}
+        - {x: 63, y: 7}
+        - {x: 63, y: 45}
+        - {x: 33, y: 62}
+      - - {x: -62, y: 40}
+        - {x: -59, y: 39}
+        - {x: -56, y: 41}
+        - {x: -57, y: 44}
+        - {x: -61, y: 45}
+        - {x: -63, y: 43}
     - name: Parent Spritesheet_9
       rect:
         serializedVersion: 2
@@ -142,6 +278,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 62}
+        - {x: -30, y: 62}
+        - {x: -38, y: 55}
+        - {x: -46, y: 40}
+        - {x: -46, y: -58}
+        - {x: 34, y: -58}
+        - {x: 49, y: -55}
+        - {x: 62, y: -11}
+        - {x: 62, y: 47}
+        - {x: 51, y: 58}
     - name: Parent Spritesheet_10
       rect:
         serializedVersion: 2
@@ -152,6 +299,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 59}
+        - {x: -49, y: 51}
+        - {x: -49, y: -55}
+        - {x: -45, y: -57}
+        - {x: 43, y: -57}
+        - {x: 61, y: -29}
+        - {x: 61, y: 59}
     - name: Parent Spritesheet_11
       rect:
         serializedVersion: 2
@@ -162,6 +317,21 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: 36}
+        - {x: 57, y: 41}
+        - {x: 39, y: 34}
+        - {x: 29, y: 24}
+        - {x: 24, y: 51}
+        - {x: 1, y: 56}
+        - {x: -40, y: 56}
+        - {x: -50, y: 18}
+        - {x: -50, y: -46}
+        - {x: -45, y: -55}
+        - {x: 52, y: -55}
+        - {x: 56, y: -45}
+        - {x: 55, y: -34}
+        - {x: 63, y: -4}
     - name: Parent Spritesheet_12
       rect:
         serializedVersion: 2
@@ -172,6 +342,21 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 62}
+        - {x: -42, y: -49}
+        - {x: -38, y: -55}
+        - {x: 36, y: -55}
+        - {x: 49, y: -52}
+        - {x: 63, y: 7}
+        - {x: 63, y: 45}
+        - {x: 33, y: 62}
+      - - {x: -62, y: 40}
+        - {x: -59, y: 39}
+        - {x: -56, y: 41}
+        - {x: -57, y: 44}
+        - {x: -61, y: 45}
+        - {x: -63, y: 43}
     - name: Parent Spritesheet_13
       rect:
         serializedVersion: 2
@@ -182,6 +367,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 61}
+        - {x: -57, y: 61}
+        - {x: -57, y: -49}
+        - {x: -55, y: -58}
+        - {x: 54, y: -58}
+        - {x: 58, y: -56}
+        - {x: 59, y: -53}
+        - {x: 59, y: 22}
+        - {x: 20, y: 60}
     - name: Parent Spritesheet_14
       rect:
         serializedVersion: 2
@@ -192,6 +387,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 61}
+        - {x: -44, y: 52}
+        - {x: -57, y: -1}
+        - {x: -57, y: -31}
+        - {x: -44, y: -58}
+        - {x: 51, y: -58}
+        - {x: 51, y: 38}
+        - {x: 18, y: 61}
     - name: Parent Spritesheet_15
       rect:
         serializedVersion: 2
@@ -202,6 +406,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 62}
+        - {x: -64, y: 16}
+        - {x: -64, y: -33}
+        - {x: -42, y: -59}
+        - {x: 49, y: -59}
+        - {x: 54, y: -45}
+        - {x: 54, y: -15}
+        - {x: 34, y: 62}
     - name: Parent Spritesheet_16
       rect:
         serializedVersion: 2
@@ -212,6 +425,26 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -36}
+        - {x: 49, y: -33}
+        - {x: 54, y: -38}
+        - {x: 58, y: -43}
+        - {x: 64, y: -41}
+        - {x: 64, y: 30}
+        - {x: 59, y: 33}
+        - {x: 44, y: 20}
+        - {x: 23, y: 61}
+        - {x: -33, y: 61}
+        - {x: -41, y: 50}
+        - {x: -39, y: 47}
+        - {x: -50, y: 19}
+        - {x: -50, y: -50}
+        - {x: -26, y: -59}
+        - {x: 17, y: -59}
+        - {x: 46, y: -53}
+        - {x: 53, y: -41}
+        - {x: 51, y: -35}
     - name: Parent Spritesheet_17
       rect:
         serializedVersion: 2
@@ -222,6 +455,26 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -36}
+        - {x: 49, y: -33}
+        - {x: 54, y: -38}
+        - {x: 58, y: -43}
+        - {x: 64, y: -41}
+        - {x: 64, y: 30}
+        - {x: 59, y: 33}
+        - {x: 44, y: 20}
+        - {x: 23, y: 61}
+        - {x: -33, y: 61}
+        - {x: -41, y: 50}
+        - {x: -39, y: 47}
+        - {x: -50, y: 19}
+        - {x: -50, y: -50}
+        - {x: -26, y: -59}
+        - {x: 17, y: -59}
+        - {x: 46, y: -53}
+        - {x: 53, y: -41}
+        - {x: 51, y: -35}
     - name: Parent Spritesheet_18
       rect:
         serializedVersion: 2
@@ -232,6 +485,27 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -36}
+        - {x: 49, y: -33}
+        - {x: 54, y: -38}
+        - {x: 58, y: -43}
+        - {x: 64, y: -40}
+        - {x: 64, y: 20}
+        - {x: 62, y: 28}
+        - {x: 59, y: 33}
+        - {x: 44, y: 20}
+        - {x: 23, y: 61}
+        - {x: -33, y: 61}
+        - {x: -41, y: 50}
+        - {x: -39, y: 47}
+        - {x: -50, y: 19}
+        - {x: -50, y: -50}
+        - {x: -26, y: -59}
+        - {x: 17, y: -59}
+        - {x: 46, y: -53}
+        - {x: 53, y: -41}
+        - {x: 51, y: -35}
     - name: Parent Spritesheet_19
       rect:
         serializedVersion: 2
@@ -242,6 +516,34 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 61}
+        - {x: -41, y: 50}
+        - {x: -39, y: 47}
+        - {x: -50, y: 19}
+        - {x: -50, y: -45}
+        - {x: -33, y: -59}
+        - {x: 15, y: -59}
+        - {x: 41, y: -55}
+        - {x: 55, y: -53}
+        - {x: 55, y: 21}
+        - {x: 42, y: 61}
+      - - {x: 60, y: -14}
+        - {x: 58, y: -15}
+        - {x: 51, y: -28}
+        - {x: 51, y: -33}
+        - {x: 57, y: -42}
+        - {x: 60, y: -42}
+        - {x: 64, y: -39}
+        - {x: 64, y: -17}
+        - {x: 62, y: -14}
+      - - {x: 57, y: 31}
+        - {x: 52, y: 27}
+        - {x: 52, y: -5}
+        - {x: 56, y: -13}
+        - {x: 64, y: -13}
+        - {x: 64, y: 30}
+        - {x: 62, y: 31}
     - name: Parent Spritesheet_20
       rect:
         serializedVersion: 2
@@ -252,6 +554,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 61}
+        - {x: -57, y: 61}
+        - {x: -57, y: -49}
+        - {x: -55, y: -58}
+        - {x: 54, y: -58}
+        - {x: 58, y: -56}
+        - {x: 59, y: -53}
+        - {x: 59, y: 22}
+        - {x: 20, y: 60}
     - name: Parent Spritesheet_21
       rect:
         serializedVersion: 2
@@ -262,6 +574,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 61}
+        - {x: -51, y: 61}
+        - {x: -51, y: -58}
+        - {x: 42, y: -58}
+        - {x: 49, y: -43}
+        - {x: 52, y: -32}
+        - {x: 52, y: 48}
     - name: Parent Spritesheet_22
       rect:
         serializedVersion: 2
@@ -272,6 +592,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 62}
+        - {x: -39, y: 62}
+        - {x: -49, y: 41}
+        - {x: -49, y: -50}
+        - {x: -44, y: -59}
+        - {x: 32, y: -59}
+        - {x: 34, y: -55}
+        - {x: 47, y: -27}
+        - {x: 47, y: -1}
     - name: Parent Spritesheet_23
       rect:
         serializedVersion: 2
@@ -282,6 +612,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 60}
+        - {x: -41, y: 57}
+        - {x: -41, y: -46}
+        - {x: -25, y: -58}
+        - {x: 32, y: -58}
+        - {x: 40, y: -39}
+        - {x: 40, y: 13}
+        - {x: 10, y: 60}
     - name: Parent Spritesheet_24
       rect:
         serializedVersion: 2
@@ -292,6 +631,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 61}
+        - {x: -43, y: 58}
+        - {x: -43, y: -28}
+        - {x: -33, y: -52}
+        - {x: 11, y: -52}
+        - {x: 39, y: -43}
+        - {x: 39, y: 16}
+        - {x: 11, y: 61}
     - name: Parent Spritesheet_25
       rect:
         serializedVersion: 2
@@ -302,6 +650,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 61}
+        - {x: -43, y: 58}
+        - {x: -43, y: -43}
+        - {x: -37, y: -52}
+        - {x: 7, y: -52}
+        - {x: 39, y: -40}
+        - {x: 39, y: 16}
+        - {x: 11, y: 61}
     - name: Parent Spritesheet_26
       rect:
         serializedVersion: 2
@@ -312,6 +669,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 59}
+        - {x: -45, y: -52}
+        - {x: -39, y: -55}
+        - {x: 42, y: -55}
+        - {x: 54, y: -27}
+        - {x: 54, y: 6}
+        - {x: 12, y: 59}
     - name: Parent Spritesheet_27
       rect:
         serializedVersion: 2
@@ -322,6 +687,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: -52}
+        - {x: -36, y: -55}
+        - {x: 51, y: -55}
+        - {x: 51, y: 44}
+        - {x: 49, y: 60}
+        - {x: -22, y: 60}
+        - {x: -42, y: 39}
     - name: Parent Spritesheet_28
       rect:
         serializedVersion: 2
@@ -332,6 +705,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: -52}
+        - {x: -36, y: -55}
+        - {x: 51, y: -55}
+        - {x: 51, y: 44}
+        - {x: 49, y: 60}
+        - {x: -22, y: 60}
+        - {x: -42, y: 39}
     - name: Parent Spritesheet_29
       rect:
         serializedVersion: 2
@@ -342,6 +723,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: -52}
+        - {x: -36, y: -55}
+        - {x: 51, y: -55}
+        - {x: 51, y: 44}
+        - {x: 49, y: 60}
+        - {x: -22, y: 60}
+        - {x: -42, y: 39}
     - name: Parent Spritesheet_30
       rect:
         serializedVersion: 2
@@ -352,6 +741,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: -52}
+        - {x: -36, y: -55}
+        - {x: 51, y: -55}
+        - {x: 51, y: 44}
+        - {x: 49, y: 60}
+        - {x: -22, y: 60}
+        - {x: -42, y: 39}
     - name: Parent Spritesheet_31
       rect:
         serializedVersion: 2
@@ -362,5 +759,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: -52}
+        - {x: -36, y: -55}
+        - {x: 51, y: -55}
+        - {x: 51, y: 44}
+        - {x: 49, y: 60}
+        - {x: -22, y: 60}
+        - {x: -42, y: 39}
+    outline: []
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
