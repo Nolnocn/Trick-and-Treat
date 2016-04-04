@@ -62,9 +62,14 @@ public class MainMenuUIManager : MonoBehaviour {
 	public Texture2D CandyCorn_Active_JoeSucks;
 
 	private AsyncOperation sceneLoad;
+	private bool isWebBuild;
 
 	void Start()
 	{
+		isWebBuild = (Application.platform == RuntimePlatform.OSXWebPlayer || 
+			Application.platform == RuntimePlatform.WindowsWebPlayer ||
+			Application.platform == RuntimePlatform.WebGLPlayer);
+		
 		Cursor.visible = true;
 
 		if(PlayerPrefs.HasKey("goToScore"))
@@ -149,7 +154,7 @@ public class MainMenuUIManager : MonoBehaviour {
 				}
 
 				//QUIT
-				if(Application.platform != RuntimePlatform.OSXWebPlayer && Application.platform != RuntimePlatform.WindowsWebPlayer)
+				if(!isWebBuild)
 				{
 					if (GUI.Button (new Rect (Screen.width * xBoxTransform - 125, Screen.height * yButtonOffset + 180, 250, 50), quitButton)) {
 						Application.Quit();
